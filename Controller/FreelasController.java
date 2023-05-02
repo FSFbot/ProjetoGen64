@@ -34,8 +34,8 @@ public class FreelasController implements UsuarioRepositorio {
 	@Override
 	public void cadastrar(freelancers usuario) {
 		listaUsuarios.add(usuario);
-		System.out.println("\nUsuario Criado com sucesso!!!!!!\nO seu número de ID é: " + usuario.getNumero()
-				+ " Salve essa informações, pois ela será necessária para acessar suas informações!!");
+		System.out.println("\nUsuario Criado com sucesso!!!\n\nO seu número de ID é: " + usuario.getNumero()
+				+ "!!! \nSalve esse ID, pois ele será necessário para acessar suas informações!!!");
 	}
 
 	@Override
@@ -44,9 +44,9 @@ public class FreelasController implements UsuarioRepositorio {
 
 		if (buscaUsuario != null) {
 			listaUsuarios.set(listaUsuarios.indexOf(buscaUsuario), usuario);
-			System.out.println("\nO usuario: " + usuario.getNumero() + " Foi atualizado parabens uhuuu");
+			System.out.println("\nO usuario: " + usuario.getNumero() + " Foi atualizado. Parabéns, uhuuu!!!");
 		} else {
-			System.out.println("\nID não encontrado, digite uma opção valida");
+			System.out.println("\nID não encontrado! Digite uma opção válida.");
 		}
 
 	}

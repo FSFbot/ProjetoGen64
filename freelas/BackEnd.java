@@ -3,19 +3,24 @@ package freelas;
 public class BackEnd extends freelancers {
 
 	
-	private String Linkedin;
+	private String linkedin;
 
-	public BackEnd(int numero, String nome, String celular, int areaAtuacao, float valor, String linkedin) {
-		super(numero, nome, celular, areaAtuacao, valor);
-		Linkedin = linkedin;
+	public BackEnd(int numero, String nome, String celular, int areaAtuacao, float valor, String carta, String linkedin) {
+		super(numero, nome, celular, areaAtuacao, valor, carta);
+		linkedin = linkedin;
+		
 	}
 
 	public String getLinkedin() {
-		return Linkedin;
+		return linkedin;
 	}
 
 	public void setLinkedin(String linkedin) {
-		Linkedin = linkedin;
+		linkedin = linkedin;
+	}
+	
+	public void visualizarB() {
+		System.out.println("\nLinkedIn: " + this.linkedin);
 	}
 	
 }
