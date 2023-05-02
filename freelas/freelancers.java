@@ -11,19 +11,24 @@ public abstract class freelancers {
 	private String celular;
 	private int areaAtuacao;
 	private float valor;
+	private String carta;
 
-	public freelancers(int numero, String nome, String celular, int areaAtuacao, float valor) {
+	public freelancers(int numero, String nome, String celular, int areaAtuacao, float valor, String carta) {
 		super();
 		this.numero = numero;
 		this.nome = nome;
 		this.celular = celular;
 		this.areaAtuacao = areaAtuacao;
 		this.valor = valor;
+		this.carta = carta;
 	}
-
+	
+	
 	public int getNumero() {
 		return numero;
 	}
+
+	
 
 	public void setNumero(int numero) {
 		this.numero = numero;
@@ -61,7 +66,13 @@ public abstract class freelancers {
 		this.valor = valor;
 	}
 
-	
+	public String getCarta() {
+		return carta;
+	}
+
+	public void setCarta(String carta) {
+		this.carta = carta;
+	}
 
 	public void visualizar() {
 
@@ -76,13 +87,16 @@ public abstract class freelancers {
 		case 2:
 			areaAtuacao = "BackEnd";
 			break;
-
+		case 3:
+			areaAtuacao = "FrontEnd";
+			break;
 		}
-		System.out.println("\nID: " + this.numero);
 		System.out.println("\nNome: " + this.nome);
 		System.out.println("\nContato: " + this.celular);
 		System.out.println("\nÁrea de atuação: " + areaAtuacao);
 		System.out.println("\nValor por hora de serviço prestado: " + nf.format(this.valor));
+		System.out.println("\nCarta de apresentação: " + this.carta);
+		//System.out.println("\nLinkedIn: " + getLinkedin());
 		System.out.println("\n=============================================================");
 
 	}
