@@ -12,8 +12,10 @@ public abstract class freelancers {
 	private int areaAtuacao;
 	private float valor;
 	private String carta;
+	private String linkedin;
 
-	public freelancers(int numero, String nome, String celular, int areaAtuacao, float valor, String carta) {
+	public freelancers(int numero, String nome, String celular, int areaAtuacao, float valor, String carta,
+			String linkedin) {
 		super();
 		this.numero = numero;
 		this.nome = nome;
@@ -21,14 +23,12 @@ public abstract class freelancers {
 		this.areaAtuacao = areaAtuacao;
 		this.valor = valor;
 		this.carta = carta;
+		this.linkedin = linkedin;
 	}
-	
-	
+
 	public int getNumero() {
 		return numero;
 	}
-
-	
 
 	public void setNumero(int numero) {
 		this.numero = numero;
@@ -74,6 +74,16 @@ public abstract class freelancers {
 		this.carta = carta;
 	}
 
+	public String getLinkedin(String linkedin) {
+		return linkedin;
+
+	}
+
+	public void setLinkedin(String linkedin) {
+		this.linkedin = linkedin;
+
+	}
+
 	public void visualizar() {
 
 		NumberFormat nf = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
@@ -96,8 +106,9 @@ public abstract class freelancers {
 		System.out.println("\nÁrea de atuação: " + areaAtuacao);
 		System.out.println("\nValor por hora de serviço prestado: " + nf.format(this.valor));
 		System.out.println("\nCarta de apresentação: " + this.carta);
-		//System.out.println("\nLinkedIn: " + getLinkedin());
+		System.out.println("\nLinkedIn: " + this.linkedin);
 		System.out.println("\n=============================================================");
 
 	}
+
 }
