@@ -2,7 +2,7 @@ package Controller;
 
 import Repositorio.UsuarioRepositorio;
 import freelas.freelancers;
-
+import freelas.BackEnd;
 import java.util.ArrayList;
 
 public class FreelasController implements UsuarioRepositorio {
@@ -20,8 +20,6 @@ public class FreelasController implements UsuarioRepositorio {
 			System.out.println("\nA Conta número: " + numero + " não foi encontrada!");
 		}
 	}
-
-	
 
 	@Override
 	public void acessarTodos() {

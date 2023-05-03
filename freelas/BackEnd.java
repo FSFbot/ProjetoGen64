@@ -2,13 +2,13 @@ package freelas;
 
 public class BackEnd extends freelancers {
 
-	
 	private String linkedin;
 
-	public BackEnd(int numero, String nome, String celular, int areaAtuacao, float valor, String carta, String linkedin) {
-		super(numero, nome, celular, areaAtuacao, valor, carta);
+	public BackEnd(int numero, String nome, String celular, int areaAtuacao, float valor, String carta,
+			String linkedin) {
+		super(numero, nome, celular, areaAtuacao, valor, carta, linkedin);
 		linkedin = linkedin;
-		
+
 	}
 
 	public String getLinkedin() {
@@ -18,9 +18,5 @@ public class BackEnd extends freelancers {
 	public void setLinkedin(String linkedin) {
 		linkedin = linkedin;
 	}
-	
-	public void visualizarB() {
-		System.out.println("\nLinkedIn: " + this.linkedin);
-	}
-	
+
 }
